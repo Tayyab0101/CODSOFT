@@ -1,10 +1,13 @@
-# Funcs
 def add(a, b):
     return a + b
+
 def subtract(a, b):
     return a - b
+
 def multiply(a, b):
-    return a * b
+    result = a * b
+    return int(result) if result.is_integer() else result
+
 def divide(a, b):
     if b == 0:
         return "Cannot Divide by Zero."
