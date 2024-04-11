@@ -6,29 +6,21 @@ from tkinter import messagebox
 def play_round(user_choice):
     global num_rds, user_score, computer_score
     
-    # Define game emoji
     game_emojis = ["👊", "✌️", "✋"]
-    
-    # Map button text to user choices
     choices = {"Rock": 0, "Scissors": 1, "Paper": 2}
-    
-    # Get user's choice from button text
     user_choice = choices[user_choice]
-    
-    # Randomly choose computer's choice
     computer_choice = random.randrange(0, 3)
-    
-    # Determine the winner
+    # Check the winner
     result = ""
     if user_choice == computer_choice:
-        result = "It's a tie."
+        result = "It's a tie"
     elif (user_choice == 0 and computer_choice == 1) or \
          (user_choice == 1 and computer_choice == 2) or \
          (user_choice == 2 and computer_choice == 0):
         result = "You won."
         user_score += 1
     else:
-        result = "You lost."
+        result = "You lost"
         computer_score += 1
     
     # Update labels with choices and result
