@@ -20,6 +20,10 @@ def calculator():
         print("Sel Op: 1 for add, 2 for Subtract, 3 for Multiply and 4 for Division")
         choice = input("Enter operation: ")
 
+        if choice not in ["1", "2", "3", "4"]:
+            print("Invalid opartion")
+            continue
+        
         first_number = input("Enter first number: ")
         second_number = input("Enter second number: ")
 
@@ -43,7 +47,7 @@ def calculator():
             print("Invalid input")
 
         restart = input("Do you want to calculate again? (y/n): ")
-        if restart.strip().lower() != 'y':  # Check lowercase version of input
+        if restart.lower() != 'y':  # Check lowercase version of input
             break
 
 calculator()
