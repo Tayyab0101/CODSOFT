@@ -24,14 +24,16 @@ def highest_bidder():
     
     highest_bidder_name = ""
     highest_bid = 0
-    for name, company, bid in bidding_data.items():
-        if bid > highest_bid:
-            highest_bid = name["bid"]
+    for name, data in bidding_data.items():
+        if data["Bid"] > highest_bid:
+            highest_bid = data["Bid"]
             highest_bidder_name = name
-            company_name = name["Company"]
+            company_name = data["Company"]
     if company_name:
         print(f"The highest bidder is {highest_bidder_name} from company {company_name} with a bid of Rs. {highest_bid}")
     else:
-        print(f"The highest bidder is {highest_bidder_name} with a bid of Rs. {highest_bid}")
+        print(f"The highest bidder is {highest_bidder_name}, local, with a bid of Rs. {highest_bid}")
+        
+    print(bidding_data)
     
 highest_bidder()
