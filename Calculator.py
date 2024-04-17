@@ -1,53 +1,55 @@
-def add(a, b): #add
+import os
+
+def clear_screen():
+    os.system("cls" if os.name == "nt" else "clear")
+    
+def sum(a, b):
     return a + b
 
-def subtract(a, b): #sub
+def subtract(a, b):
     return a - b
 
-def multiply(a, b): #multiply
-    return int(a * b)
+def multiply(a, b):
+    return a * b
 
-def divide(a, b): # division
+def divide(a, b):
     if b == 0:
-        return "Cannot Divide by Zero."
-    elif a % b == 0:
-        return int(a / b)
+        print("Cannot divide by zero.")
+        return None
     else:
         return a / b
-
+    
 def calculator():
+    clear_screen()
+    a = int(input("Enter first number: "))  # Ask for the first number initially
     while True:
-        print("Sel Op: 1 for add, 2 for Subtract, 3 for Multiply and 4 for Division")
-        choice = input("Enter operation: ")
-
-        if choice not in ["1", "2", "3", "4"]:
-            print("Invalid opartion")
+        operation = input("Enter operation: ")
+        if operation not in ['+', '-', '*', '/']:
+            print("Invalid operation")
             continue
+        b = int(input("Enter 2nd number: "))
         
-        first_number = input("Enter first number: ")
-        second_number = input("Enter second number: ")
-
-        # Check if inputs are valid numbers
-        try:
-            a = float(first_number)
-            b = float(second_number)
-        except ValueError:
-            print("Please enter a valid number.")
-            continue  # Restart the loop
-
-        if choice == '1':
-            print("Result:", add(a, b))
-        elif choice == '2':
-            print("Result:", subtract(a, b))
-        elif choice == '3':
-            print("Result:", multiply(a, b))
-        elif choice == '4':
-            print("Result:", divide(a, b))
-        else:
-            print("Invalid input")
-
-        restart = input("Do you want to calculate again? (y/n): ")
-        if restart.lower() != 'y':  # Check lowercase version of input
-            break
+        if operation == "+":
+            result = sum(a, b)
+            print(f"Sum of {a} and {b} is {result}")
+        elif operation == "-":
+            result = subtract(a, b)
+            print(f"Subtraction of {a} and {b} is {result}")
+        elif operation == "*":
+            result = multiply(a, b)
+            print(f"Multiplication of {a} and {b} is {result}")
+        elif operation == "/":
+            if b != 0:
+                result = divide(a, b)
+                if result is not None:  # Update a only if division is successful
+                    print(f"Division of {a} and {b} is {result}")
+            else:
+                print("Cannot divide by zero.")
+                continue
+        a = result
+        choice = input("Press any key to continue with result? If not press x:\n").lower()
+        if choice == 'x':
+            exit()
+        clear_screen()
 
 calculator()

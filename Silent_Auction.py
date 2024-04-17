@@ -34,6 +34,4 @@ def highest_bidder():
     else:
         print(f"The highest bidder is {highest_bidder_name}, local, with a bid of Rs. {highest_bid}")
         
-    print(bidding_data)
-    
 highest_bidder()
