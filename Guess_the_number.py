@@ -13,7 +13,7 @@ guess1 = random.randint(1, 50)
 
 level = input("Choose your difficulty level (Hard or Easy): ").lower()
 
-def guess():
+def guess_no():
     attempts = 5 if level == "hard" else 10
     print(f"You have only {attempts} attempts to guess.")
     
@@ -29,7 +29,7 @@ def guess():
             else:
                 print("Invalid input. Please enter a number.")
         
-        diff = abs(guess - guess1)
+        diff = guess - guess1
         
         if guess == guess1:
             print("Correct. You won")
@@ -47,4 +47,4 @@ def guess():
     else:
         print("You are out of guesses. The correct number was:", guess1)
 
-guess()
+guess_no()
