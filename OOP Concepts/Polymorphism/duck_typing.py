@@ -1,3 +1,4 @@
+# Python is a duck typing languauge that means data type of a variable can change as long as the syntax is compatible (means methods are defined)
 class Dog:
     def swim(self):
         print("I'm a dog and I can swim")
@@ -15,13 +16,12 @@ class Owl:
     def bark(self):
         print("I am an owl and I don't bark")
         
-def display(obj):
+def display(obj): #obj can be changed or of any type but what matter is the methods it have....
     obj.swim()
     obj.bark()
-
   
-dog1 = Dog()
-owl1 = Owl()
+dog1 = Dog() #Instance of Dog
+owl1 = Owl() # Instance of owl
 dog1.display()
 display(owl1)
 
