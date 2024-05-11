@@ -3,15 +3,15 @@ import random
 
 getscreen()
 speed(10)
-shape("classic")
+# shape("classic")
 color("red", "yellow")
+
 begin_fill()
 while True:
     forward(200)
-    left(175)
+    left(170)
     if heading()==0:
-        break
-    
+        break   
 end_fill()
-hideturtle()
+
 exitonclick()

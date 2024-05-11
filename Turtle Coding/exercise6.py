@@ -1,20 +1,16 @@
 import random
-from turtle import *
+from turtle import Turtle as t
 
-getscreen()
-speed(0)
-title("Dot Painting")
-screensize(600, 600)
+t.title("Dot Painting")
+t.setup(600, 600)
 colors = ["red", "green", "purple", "black", "yellow", "blue", "brown", "cyan", "chocolate1"]
 
 for i in range(100):
-    penup()
-    # setheading(random.randint(25, 375))
-    goto(random.randint(-300,300), random.randint(-300,300))
-    # forward(50)
-    pencolor(random.choice(colors))
-    dot(20)
-    pendown()
+    t.penup()
+    t.goto(random.randint(-100,100), random.randint(-100,100))
+    t.pencolor(random.choice(colors))
+    t.dot(20)
+    t.pendown()
     
 
-exitonclick()
+t.exitonclick()
