@@ -12,4 +12,5 @@ for i in range(3, 9):
         forward(100)
         right(angle)
 
+hideturtle()
 exitonclick()

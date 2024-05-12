@@ -7,7 +7,7 @@ class Person:
         return f"{self.name} is {self.age} years old and {other.name} is {other.age} years old."
     
     def __gt__(self, other):
-        pass
+        return self.age > other.age
         
 p1 = Person("Tayyab", 24)
 p2 = Person("Ali", 26)

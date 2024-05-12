@@ -1,16 +1,14 @@
 from turtle import *
 import random
 
-getscreen()
 speed(10)
-# shape("classic")
 color("red", "yellow")
 
 begin_fill()
 while True:
     forward(200)
     left(170)
-    if heading()==0:
+    if distance(0, 0) < 1:  # or heading()=0
         break   
 end_fill()
 

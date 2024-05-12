@@ -23,5 +23,5 @@ class FileStorage(DataStorage):
 if __name__ == "__main__": # to run directly and save from use as module
     storage = FileStorage()
     storage.store("data.txt", "Hello, world!") # Store Data
-    # data = storage.retrieve("data.txt") # Retrieve data
-    # print(data)  # Output: "Hello, world!"
+    data = storage.retrieve("data.txt") # Retrieve data
+    print(data)  # Output: "Hello, world!"

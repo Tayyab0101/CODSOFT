@@ -16,10 +16,10 @@ class Student:
         print(f"I'm {self.name} and my age is {self.__age}") #may be used as a func or normally as in print/return
 
 s1 = Student("Tayyab", 23, 234567)
-print(s1._Student__age)
+print(s1._Student__age) # Name Mangling (Not recom at all)
 s1.display_details()  # Display using public function
-s1.set_age(41)  # Using setter method
-print(s1.get_actualAge())  # Accessing updated age using getter method
-s1.display_details()  # Display updated details
+s1.set_age(41)  # Using setter and getter method
+print(s1.get_actualAge())  
+s1.display_details()
 
 

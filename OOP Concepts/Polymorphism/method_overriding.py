@@ -1,4 +1,5 @@
 # Method overriding should have atleast two classes and is inplemented in Inheritence only.
+# This is run-time polymorphism
 
 class Human:
     def eat(self):
