@@ -4,7 +4,7 @@ class Person:
         self.age = age
         
     def __add__(self, other):
-        return f"{self.name} is {self.age} years old and {other.name} is {other.age} years old."
+        return f"add operator is being defined here.\nThe data of Person instances is as: {self.name} is {self.age} years old and {other.name} is {other.age} years old."
     
     def __gt__(self, other):
         return self.age > other.age

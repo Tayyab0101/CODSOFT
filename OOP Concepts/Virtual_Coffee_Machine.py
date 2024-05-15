@@ -18,19 +18,13 @@ class CoffeeMachine:
         exit()
 
     def make_coffee(self, drink):
-        # Get the required resources for the chosen drink
-        required_resources = self.resource_requirements[drink]
+        required_resources = self.resource_requirements[drink] # Get the required resources for chosen drink
+        if not self.has_enough_resources(required_resources): # Check if, enough resources for chosen drink
+            return False
+        if not self.check_resources_available(required_resources): # Check no resource, prompt user to refill
+            return False
         
-        # Check if there are enough resources for the chosen drink
-        if not self.has_enough_resources(required_resources):
-            return False
-
-        # Check if any resource is empty, prompt user to refill
-        if not self.check_resources_available(required_resources):
-            return False
-
-        # Proceed with the purchase if there are enough resources
-        price = self.prices[drink]
+        price = self.prices[drink] # Proceed with the purchase if there are enough resources
         total_rs = self.accept_payment(price)  # Get the total amount inserted
         if total_rs is False:
             return False
