@@ -1,9 +1,3 @@
-# # we can aslo do it using deque from collections as 
-# from collections import deque  
-# class Queue:
-#     def __init__(self):
-#         self.queue = deque()
-
 class Queue:
     def __init__(self):
         self.queue = []
@@ -11,24 +5,24 @@ class Queue:
     def is_empty(self):
         return len(self.queue) == 0
     
-    def enqueue(self, item):
-        self.queue.append(item)
+    def enqueue(self, serial, item):  # in case of append whole scenarios would have to be chnaged
+        self.queue.insert(serial, item)
     
     def dequeue(self):
         if not self.is_empty():
-            return self.queue.pop(0)
+            return self.queue.pop(-1)
         else:
             return "Its an empty queue"
     
     def front(self):
         if not self.is_empty():
-            return self.queue[0]
+            return self.queue[-1]
         else:
             return "its an empty queue"
         
     def rear(self):
         if not self.is_empty():
-            return self.queue[-1]
+            return self.queue[0]
         else:
             return "Its an empty queue"
         
@@ -38,10 +32,10 @@ class Queue:
 new_queue = Queue()
 print(new_queue.is_empty())
 
-new_queue.enqueue(5)
-new_queue.enqueue(6)
-new_queue.enqueue(7)
-new_queue.enqueue(8)
+new_queue.enqueue(0, 5)
+new_queue.enqueue(0, 6)
+new_queue.enqueue(0, 7)
+new_queue.enqueue(0, 8)
 print(new_queue.display())
 
 new_queue.dequeue()
