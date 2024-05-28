@@ -7,7 +7,7 @@ print(type(array1))
 print(f"Its a {np.ndim(array1)} dimensional array") # Number of dimensions
 print("Shape of the array:", np.shape(array1)) 
 print("Number of elements in the array:", np.size(array1))  # Number of elements
-print("Size of a single array element in bytes:", array1.itemsize) 
+print("Size of a single array element in bytes:", array1.itemsize)
 print("Data type of array is", array1.dtype) # int32, float64, U6 for string, U11 for mix
 print(array1[0, 1:]) # Slicing or like aray1[0][1][2]
 

@@ -40,11 +40,11 @@ print(new_queue.is_empty())  # Should print True
 new_queue.enqueue(11)
 new_queue.enqueue(23)
 new_queue.enqueue(13)
-print(new_queue.display())  # Should print [11, 23, 13]
+print(new_queue.display()) 
 
-print(new_queue.front())  # Should print 11
+print(new_queue.front())  
 
-print(new_queue.dequeue())  # Should print 23 (the highest priority)
-print(new_queue.display())  # Should print [11, 13]
+print(new_queue.dequeue())  
+print(new_queue.display())  
 
-print(new_queue.rear())  # Should print 13
+print(new_queue.rear()) 

@@ -5,8 +5,8 @@ class Queue:
     def is_empty(self):
         return len(self.queue) == 0
     
-    def enqueue(self, serial, item):  # in case of append whole scenarios would have to be chnaged
-        self.queue.insert(serial, item)
+    def enqueue(self, index, item):  # in case of append whole scenarios would have to be chnaged
+        self.queue.insert(index, item)
     
     def dequeue(self):
         if not self.is_empty():
@@ -27,7 +27,7 @@ class Queue:
             return "Its an empty queue"
         
     def display(self):
-        return self.queue
+        return list(self.queue)
     
 new_queue = Queue()
 print(new_queue.is_empty())

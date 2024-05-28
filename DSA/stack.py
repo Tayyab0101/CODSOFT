@@ -1,3 +1,9 @@
+# we can also do it using deque from collections as 
+# from collections import deque  
+# class Queue:
+#     def __init__(self):
+#         self.stack = deque()
+
 class Stack:
     def __init__ (self):
         self.stack = []

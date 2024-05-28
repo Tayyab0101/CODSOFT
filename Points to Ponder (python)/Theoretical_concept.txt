@@ -7,7 +7,7 @@
     d.  Set. set - frozenSet
 
 2. What is diffrence between printing in Python and other languages?
-    Simply you don't need to tell or declare data type before storing it in a variable(container). It auto access the type of input. But to explain this, we may use the operator overloading method, in which we actually define the role of that operator. Simmilarly, in python all this is already stored.
+    Simply you don't need to tell or declare data type before storing it in a variable(container). It auto access the type of input. But to explain this, we may use the example of operator overloading method, in which we actually define the role of that operator. Simmilarly, in python all this is already stored.
     str.__add__, int.__gt__ etc
 
 3. Escape character.
@@ -35,7 +35,7 @@
 5. Why Python doesn't have the do while loop?
     In Python, there isn't a do-while loop construct like in some other languages because the language prioritizes readability, simplicity, and avoiding unnecessary redundancy in syntax. Instead, Python offers versatile looping constructs like while and for loops, which can achieve similar tasks without introducing additional complexity. By using a while loop with an initial condition check, Python encourages a more Pythonic approach to looping.
 
-6. Types of Erroe.
-    a. Syntax Error: 
+6. Types of Error.
+    a. Syntax Error.
     b. Runtime Error: Name, Type, ZeroDivion, Index, Value, Attribute, Key, Memory, IO, Import
-    c. Semantic or Logic Errors: 
+    c. Semantic or Logic Errors.
