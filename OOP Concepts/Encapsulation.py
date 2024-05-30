@@ -6,11 +6,11 @@ class Student:
         self._roll_no = roll_no #Protected Attrib (Don't work exactly as desired in Python. Can be accessed)
         self.__age = age  # Private attribute 
         
-    def get_actualAge(self):
-        return self.__age
-
     def set_age(self, age):
         self.__age = age
+    
+    def get_age(self):
+        return self.__age
 
     def display_details(self):
         print(f"I'm {self.name} and my age is {self.__age}") #may be used as a func or normally as in print/return
@@ -18,8 +18,9 @@ class Student:
 s1 = Student("Tayyab", 23, 234567)
 print(s1._Student__age) # Name Mangling (Not recom at all)
 s1.display_details()  # Display using public function
-s1.set_age(41)  # Using setter and getter method
-print(s1.get_actualAge())  
+# s1.set_age(43)
+s1.get_age()  # Using setter and getter method
+print(s1.get_age())  
 s1.display_details()
 
 

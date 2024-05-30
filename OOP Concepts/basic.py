@@ -3,8 +3,8 @@ class Point:
         self.x = x
         self.y = y
         
-    # def __str__(self):
-    #     return f"({self.x}, {self.y})"
+    def __str__(self):
+        return f"({self.x}, {self.y})"
 
 class Shape:
     def __init__(self, points):
