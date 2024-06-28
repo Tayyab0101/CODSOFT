@@ -1,26 +1,23 @@
-import gc  # Import the gc module for garbage collection
+import gc
 
-# Define a class representing a Person
-class Person:
-    def __init__(self, name):
-        self.name = name
-        print(f"{self.name} created.")
-
+class House:
+    def __init__(self, address):
+        self.address = address
+        print(f"A house at {address} is constructed.")
+    
     def __del__(self):
-        print(f"{self.name} deleted.")
+        print(f"The house at {self.address} is demolished.")
 
-# Create instances of the Person class
-person1 = Person("Alice")
-person2 = Person("Bob")
+# Create some instances of the House class
+house1 = House("123 Main Street")
+house2 = House("456 Oak Avenue")
 
-# Create a circular reference
-person1.friend = person2
-person2.friend = person1
+# Now, let's simulate a situation where the houses are no longer needed
+# We'll delete the references to the houses
+del house1
+del house2
 
-# Delete references to the Person instances
-del person1
-del person2
+# At this point, the houses are no longer accessible, but they still exist in memory
 
-# Force garbage collection
-print("Garbage collection...")
+# Let's trigger garbage collection explicitly to reclaim the memory
 gc.collect()

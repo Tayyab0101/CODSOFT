@@ -1,3 +1,4 @@
+#Virtual Coffee Machine
 class CoffeeMachine:
     def __init__(self):
         self.water = 250
